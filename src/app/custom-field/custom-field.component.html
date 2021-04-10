@@ -1,0 +1,15 @@
+<mat-form-field appearance="outline" [floatLabel]="'always'">
+  <mat-label>Enter Date</mat-label>
+  <input
+    [id]="id"
+    #input
+    matInput
+    placeholder="Enter Date"
+    [formControl]="formControl"
+    [required]="required"
+    (keydown.space)="$event.preventDefault();"
+    (keyup)="onInput($event)"
+  />
+  <mat-hint>Required</mat-hint>
+  <mat-error>Invalid!</mat-error>
+</mat-form-field>
